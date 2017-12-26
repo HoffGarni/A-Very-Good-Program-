@@ -1,0 +1,119 @@
+﻿   
+/*==============================
+General Styles
+==============================*/
+.navbar-brand {
+    height:80px;
+}
+.nav .navbar-right {
+    
+}
+
+ .navbar-default .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
+          color: #fff;
+          background-color: #7EACFF; 
+      }
+ h3 {
+padding: 15px 5px;
+font-weight: 900;
+text-transform: uppercase;
+}
+ section {
+    padding-top:120px;
+     
+}
+
+/* =============================================================
+  HOME SECTION STYLES
+ ============================================================ */
+#home-sec {
+    
+    background: url(../img/home.jpg) no-repeat center center;
+    padding: 0;
+    -webkit-background-size: cover;
+    background-size: cover;
+    -moz-background-size: cover;
+    min-height: 600px;
+}
+
+    #home-sec .overlay {
+        background-color: rgba(0, 0, 0, 0.75);
+        min-height: 600px;
+    }
+
+    #home-sec h1 {
+        line-height: 60px;
+        font-size: 45px;
+        font-weight: 900;
+        color: #fff;
+    }
+
+    #home-sec mark {
+        background-color: rgba(21, 236, 121, 0.5);
+        color: #fff;
+        padding: 10px 5px 10px 19px;
+        margin: 0px 15px 0px 8px;
+        border-radius: 10px;
+        -moz-border-radius: 10px;
+        -webkit-border-radius: 10px;
+    }
+
+.home-p {
+    line-height: 30px;
+    color: #E0E0E0;
+    font-size: 16px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.copyrights{
+	text-indent:-9999px;
+	height:0;
+	line-height:0;
+	font-size:0;
+	overflow:hidden;
+}
+/* =============================================================
+  ABOUT SECTION STYLES
+ ============================================================ */
+#about-sec {
+    background-color: #ededed;
+    font-size:16px;
+    padding-bottom:50px;
+}
+/* =============================================================
+  DESCRIPTION SECTION STYLES
+ ============================================================ */
+#description-sec {
+    padding-bottom:50px;
+}
+
+    #description-sec p {
+        font-size:20px;
+        line-height:35px;
+    }
+    /* =============================================================
+  CONTACT SECTION STYLES
+ ============================================================ */
+#contact-sec {
+    background-color: #ededed;
+    font-size:16px;
+    padding-bottom:50px;
+}
+
+ /* =============================================================
+  FOOTER SECTION STYLES
+ ============================================================ */
+.footer {
+    padding:20px;
+    font-size:15px;
+
+}
+    .footer a ,.footer a:hover {
+        color:rgba(0, 0, 0, 0.75);
+        text-decoration:none;
+    }
+
+
+
+
+     
