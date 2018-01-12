@@ -58,7 +58,7 @@ strong {
   font-weight: bold;
 }
 dfn {
-  font-style: italic;
+  font-style:italic;
 }
 h1 {
   margin: .67em 0;
@@ -900,7 +900,8 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Helvetica", Helvetica, Arial, sans-serif;
+  background: url(../img/10.jpg) repeat center center;
   font-size: 14px;
   line-height: 1.42857143;
   color: #333;
@@ -3204,7 +3205,7 @@ tbody.collapse.in {
   font-size: 14px;
   text-align: left;
   list-style: none;
-  background-color: #fff;
+  background-color: #ff0000;
   -webkit-background-clip: padding-box;
           background-clip: padding-box;
   border: 1px solid #ccc;
