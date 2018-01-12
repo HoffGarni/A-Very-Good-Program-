@@ -1,4 +1,4 @@
-﻿   
+﻿
 /*==============================
 General Styles
 ==============================*/
@@ -6,12 +6,12 @@ General Styles
     height:80px;
 }
 .nav .navbar-right {
-    
+
 }
 
  .navbar-default .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
           color: #fff;
-          background-color: #7EACFF; 
+          background-color: #bc9a5f;
       }
  h3 {
 padding: 15px 5px;
@@ -20,14 +20,14 @@ text-transform: uppercase;
 }
  section {
     padding-top:120px;
-     
+
 }
 
 /* =============================================================
   HOME SECTION STYLES
  ============================================================ */
 #home-sec {
-    
+
     background: url(../img/home.jpg) no-repeat center center;
     padding: 0;
     -webkit-background-size: cover;
@@ -112,8 +112,3 @@ text-transform: uppercase;
         color:rgba(0, 0, 0, 0.75);
         text-decoration:none;
     }
-
-
-
-
-     
