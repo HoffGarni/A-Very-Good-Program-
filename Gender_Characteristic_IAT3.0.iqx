@@ -94,26 +94,26 @@
 **************************************************************************************************************
 自动更新
 *********************
-/completed:					0 = 脚本未完成; 1 = 脚本已完成(所有情况下运行)
+/completed:					0 = script was not completed; 1 = script was completed (all conditions run)
 
-/ sum1a:					记录第一个相容模块 1A 中正确应答的反应时总和（仅记录反应时<= 10000ms的部分）
-								注: 通过设计，所有试次的应答都是正确的（不管初始应答的准确性如何）
-/ sum2a:					记录第一个不相容模块 2A 中正确应答的反应时总和（仅记录反应时<= 10000ms的部分）
-								注: 通过设计，所有试次的应答都是正确的（不管初始应答的准确性如何）
-/ sum1b:					记录第二个相容模块 1B 中正确应答的反应时总和（仅记录反应时<= 10000ms的部分）
-								注: 通过设计，所有试次的应答都是正确的（不管初始应答的准确性如何）
-/ sum2b:					记录第二个不相容模块 2B 中正确应答的反应时总和（仅记录反应时<= 10000ms的部分）
-								注: 通过设计，所有试次的应答都是正确的（不管初始应答的准确性如何）
-/ n1a:						计数第一个相容模块 1A 中的试次数（第1个试次除外）
-/ n2a:						计数第一个不相容模块 2A 中的试次数（第1个试次除外）
-/ n1b:						计数第二个相容模块 1B 中的试次数
-/ n2b:						计数第二个不相容模块 2B 中的试次数
-/ ss1a:						记录第一个相容模块 1A 中正确应答的反应时平方和（仅记录反应时<= 10000ms的部分）
-/ ss2a						记录第一个不相容模块 2A 中正确应答的反应时平方和（仅记录反应时<= 10000ms的部分）
-/ ss1b:						记录第二个相容模块 1B 中正确应答的反应时平方和（仅记录反应时<= 10000ms的部分）
-/ ss2b:						记录第二个不相容模块 2B 中正确应答的反应时平方和（仅记录反应时<= 10000ms的部分） 
-/ magnitude:				内隐偏好的程度: "无到微弱", "轻微", "中等", "强"
-/ n_correct:				计数所有试次中计入到D分数中的初始正确应答数
+/ sum1a:					tracks the sum of the latencies to correct responses (latencies <= 10000ms) for the first compatible block 1A
+								Note: by design, all final trial responses are correct (regardless of accuracy of initial response)
+/ sum2a:					tracks the sum of the latencies to correct responses (latencies <= 10000ms) for the first incompatible block 2A
+								Note: by design, all final trial responses are correct (regardless of accuracy of initial response) 
+/ sum1b:					tracks the sum of the latencies to correct responses (latencies <= 10000ms) for the second compatible block 1B
+								Note: by design, all final trial responses are correct (regardless of accuracy of initial response)
+/ sum2b:					tracks the sum of the latencies to correct responses (latencies <= 10000ms) for the second incompatible block 2B
+								Note: by design, all final trial responses are correct (regardless of accuracy of initial response) 
+/ n1a:						counts the number of trials in first compatible block 1A (except first one)
+/ n2a:						counts the number of trials in first incompatible block 2A (except first one)
+/ n1b:						counts the number of trials in second compatible block 1B
+/ n2b:						counts the number of trials in second incompatible block 2B
+/ ss1a:						tracks the sum of the squared latencies to correct responses (latencies <= 10000ms) in the first compatible block
+/ ss2a						tracks the sum of the squared latencies to correct responses (latencies <= 10000ms) in the first incompatible block
+/ ss1b:						tracks the sum of the squared latencies to correct responses (latencies <= 10000ms) in the second compatible block 
+/ ss2b:						tracks the sum of the squared latencies to correct responses (latencies <= 10000ms) in the second incompatible block 
+/ magnitude:				stores the magnitude of the implicit preference: "little to no", "a slight", "a moderate", "a strong"
+/ n_correct:				counts all initial correct responses of all trials that count towards D score
 
 
 <values>
@@ -134,25 +134,25 @@
 / n_correct = 0
 </values>
 
-* 1 相容, 2 不相容
-* a 第一模块, b 第二模块
+* 1 is compatible, 2 is incompatible
+* a is first block, b is second block
 
-/ m1a:					第一个相容模块中正确应答的平均反应时
-/ m2a:					第一个不相容模块中正确应答的平均反应时
-/ m1b:					第二个相容模块中正确应答的平均反应时
-/ m2b:					第二个不相容模块中正确应答的平均反应时
-/ sd1a:					第一个相容模块中正确应答反应时的标准差
-/ sd2a					第一个不相容模块中正确应答反应时的标准差
-/ sd1b:					第二个相容模块中正确应答反应时的标准差
-/ sd2b:					第二个不相容模块中正确应答反应时的标准差
-/ sda					第一模块反应时标准差
-/ sdb 					第二模块反应时标准差
-/ da:					第一模块的D分数		
-/ db:					第二模块的D分数
-/ d:					D分数总计
-/ preferred:			偏好目标类别
-/ notpreferred :		非偏好目标类别
-/ percentcorrect:       测验试次中，对D分数计算有贡献的初始正确反应的反应时总体得分百分比
+/ m1a:					mean latencies of correct responses in first compatible block
+/ m2a:					mean latencies of correct responses in first incompatible block
+/ m1b:					mean latencies of correct responses in second compatible block
+/ m2b:					mean latencies of correct responses in second incompatible block
+/ sd1a:					standard deviation of latencies of correct responses in first compatible block
+/ sd2a					standard deviation of latencies of correct responses in first incompatible block
+/ sd1b:					standard deviation of latencies of correct responses in second compatible block
+/ sd2b:					standard deviation of latencies of correct responses in second incompatible block
+/ sda					standarddeviation of latencies in first block
+/ sdb 					standarddeviation of latencies in second block
+/ da:					D-score for first blocks		
+/ db:					D-score for second blocks
+/ d:					overall D-score
+/ preferred:			stores the preferred target category
+/ notpreferred :		stores the non preferred target category
+/ percentcorrect:       the overall percent correct score of initial responses of test trials of D-score qualifying latencies
 
 <expressions>
 / m1a = values.sum1a / values.n1a
@@ -185,15 +185,15 @@ Data Columns
 初始数据文件
 ******************
 date/time/group/subject:			built in variables that track date and time when script was run with the assigned
-									subject- and group number
+									subject- and group number建立变量记录数据与被试参与实验时的被试编号和组别
 
-									Note: group1/group2 counterbalance the order in which the pairings are run
+									Note: group1/group2 counterbalance the order in which the pairings are run备注：组1与组2使得实验设计中被试在两组处理的比率平衡
 
-blockcode:							the name of the current trial
-blocknum:							the number of the current trial
-trialcode:							the name of the current trial
-trialnum:							the number of the current trial
-response:							the final trial response (scancodes of the keys pressed)
+blockcode:							the name of the current trial当前实验的名字
+blocknum:							the number of the current trial当前实验的序号
+trialcode:							the name of the current trial当前实验的名字
+trialnum:							the number of the current trial当前实验的序号
+response:							the final trial response (scancodes of the keys pressed)最后的实验反应
 										Note: script saves the final and -by design- correct response
 correct:							the accuracy of the initial response
 										0 = initial response was incorrect and needed to be corrected
@@ -246,10 +246,10 @@ Performance summary
 / stimulustimes = [0=summary]
 / validresponse = (" ")
 / recorddata = false
-/ ontrialbegin = [values.magnitude = "无到微弱"]
-/ ontrialbegin = [if( abs(expressions.d) > 0.15 ) values.magnitude = "轻微"]
-/ ontrialbegin = [if( abs(expressions.d) > 0.35 ) values.magnitude = "中等"]
-/ ontrialbegin = [if( abs(expressions.d) >= 0.65 ) values.magnitude = "强"]
+/ ontrialbegin = [values.magnitude = "little to no"]
+/ ontrialbegin = [if( abs(expressions.d) > 0.15 ) values.magnitude = "a slight"]
+/ ontrialbegin = [if( abs(expressions.d) > 0.35 ) values.magnitude = "a moderate"]
+/ ontrialbegin = [if( abs(expressions.d) >= 0.65 ) values.magnitude = "a strong"]
 / ontrialbegin = [if (expressions.d >= 0.0) expressions.preferred = item.targetALabel.1]
 / ontrialbegin = [if (expressions.d < 0.0) expressions.preferred = item.targetBLabel.1]
 / ontrialbegin = [if (expressions.d < 0.0) expressions.notpreferred= item.targetALabel.1]
@@ -257,7 +257,7 @@ Performance summary
 </trial>
 
 <text summary>
-/ items = ("你的IAT分数(D分数)是<% expressions.d %>,这表示 <% values.magnitude %> 程度地偏好 <% expressions.preferred %> 而不偏好 <% expressions.notpreferred %>.~n~n~n请按【空格】结束此会话.") 
+/ items = ("Your IAT score (D) was <% expressions.d %>, which suggests <% values.magnitude %> automatic preference for <% expressions.preferred %> compared to <% expressions.notpreferred %>.~n~n~nPress the spacebar to complete this session.") 
 / size = (60%, 60%)
 / hjustify = left
  </text>
@@ -284,13 +284,13 @@ Task instruction stimuli
 </text>
 
 <item instructions>
-/ 1 = "把你的手指放在键盘【F】和【J】上。 代表屏幕顶端类别的词语将在屏幕中间逐一显示。 当该词语属于左侧的类别时，按【F】键; 当该词语属于右侧的类别时，按下【J】键。，出现的词语只属于一个类别。 如果判断错误，会出现一个×，你需要点击另一个键来纠正错误。
+/ 1 = "把你的手指放在键盘【F】和【J】上。 代表屏幕顶端类别的词语将在屏幕中间逐一显示。 当该词语属于左侧的类别时，按【F】键; 当该词语属于右侧的类别时，按下【J】键。，出现的词语只属于一个类别。 如果判断错误，会出现一个×，直到你做出正确的反应才会跳转到下一个词语。
 
 请尽可能快而准确地做出反应，任务将持续约5分钟。"
 / 2 = "如上所示，请注意分类的类别和词语都发生了改变，规则和之前是一样的。
 
 当词语属于左侧的类别时，按【F】键; 当词语属于右侧的类别时，按【J】键。 出现的词语只属于其中一个类别。 判断错误后出现×，你需要尽可能快地通过点击另一个键来纠正错误。"
-/ 3 = "如上所示，你刚刚分别见过的这四个类别现在将会同时出现。请记住，每一个词语只属于其中一个类别。例如， 如果类别 <%item.targetalabel.item(1)%> 和 <%item.attributealabel.item(1)%> 放在了屏幕顶端两侧 ，那么属于 <%item.targetalabel.item(1)%> 的词语应当归到 <%item.targetalabel.item(1)%> 类别, 而不是 <%item.attributealabel.item(1)%> 类别。
+/ 3 = "如上所示，你刚刚分别见过的这四个类别现在将会同时出现。请记住，每一个词语只属于其中一个类别。例如， 如果类别 <%item.targetalabel.item(1)%> and <%item.attributealabel.item(1)%> 放在了屏幕顶端两侧 ，那么属于<%item.targetalabel.item(1)%> 的词语应当归到 <%item.targetalabel.item(1)%> 类别, 而不是<%item.attributealabel.item(1)%> 类别。
 
 绿色和白色的标签和词语也许能帮助你识别恰当的类别。 使用【F】和【J】键将项目分为左右四组，并通过点击另一个键来纠正错误。"
 
@@ -515,7 +515,8 @@ Blocks
 
 <block compatibletest1>
 / bgstim = (targetAleft, orleft, attributeAleftmixed, targetBright, orright, attributeBrightmixed)
-/ trials = [1=instructions; 2-21 = random(targetAleft, targetBright,attributeA, attributeB)]
+/ trials = [1=instructions;
+  2-21 = random(targetAleft, targetBright, attributeA, attributeB)]
 / errormessage = true(error,200)
 / responsemode = correct
 / ontrialend = [if(block.compatibletest1.latency  <= 10000 && block.compatibletest1.currenttrialnumber != 1 ) values.sum1a =  values.sum1a + block.compatibletest1.latency]
@@ -526,7 +527,7 @@ Blocks
 
 <block compatibletest2>
 / bgstim = (targetAleft, orleft, attributeAleftmixed, targetBright, orright, attributeBrightmixed)
-/ trials = [1-40 = random(targetAleft, targetBright,attributeA, attributeB)]
+/ trials = [1-21 = random(targetAleft, targetBright, attributeA, attributeB)]
 / errormessage = true(error,200)
 / responsemode = correct
 / ontrialend = [if(block.compatibletest2.latency  <= 10000) values.sum1b =  values.sum1b + block.compatibletest2.latency]
@@ -537,7 +538,8 @@ Blocks
 
 <block incompatibletest1>
 / bgstim = (targetBleft, orleft, attributeAleftmixed, targetAright, orright, attributeBrightmixed)
-/ trials = [1=instructions;2-21 = random(targetBleft, targetAright,attributeA, attributeB)]
+/ trials = [1=instructions;
+  2-21 = random(targetBleft, targetAright, attributeA, attributeB)]
 / errormessage = true(error,200)
 / responsemode = correct
 / ontrialend = [if(block.incompatibletest1.latency  <= 10000 && block.incompatibletest1.currenttrialnumber != 1) values.sum2a =  values.sum2a + block.incompatibletest1.latency]
@@ -548,7 +550,7 @@ Blocks
 
 <block incompatibletest2>
 / bgstim = (targetBleft, orleft, attributeAleftmixed, targetAright, orright, attributeBrightmixed)
-/ trials = [1-40 = random(targetBleft, targetAright,attributeA, attributeB)]
+/ trials = [1-21 = random(targetBleft, targetAright, attributeA, attributeB)]
 / errormessage = true(error,200)
 / responsemode = correct
 / ontrialend = [if(block.incompatibletest2.latency  <= 10000) values.sum2b =  values.sum2b + block.incompatibletest2.latency]

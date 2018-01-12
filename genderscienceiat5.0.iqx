@@ -174,38 +174,37 @@
 </expressions>
 **************************************************************************************************************
 **************************************************************************************************************
-   Data
+   数据
 **************************************************************************************************************
 **************************************************************************************************************
 ***********************************************************************
-Data Columns
+数据栏
 ***********************************************************************
 
 ******************
 初始数据文件
 ******************
-date/time/group/subject:			built in variables that track date and time when script was run with the assigned
-									subject- and group number
+date/time/group/subject:			建立变量记录数据与被试参与实验时的被试编号和组别
 
-									Note: group1/group2 counterbalance the order in which the pairings are run
+									备注：组1与组2使得实验设计中被试在两组处理的比率平衡
 
-blockcode:							the name of the current trial
-blocknum:							the number of the current trial
-trialcode:							the name of the current trial
-trialnum:							the number of the current trial
-response:							the final trial response (scancodes of the keys pressed)
-										Note: script saves the final and -by design- correct response
-correct:							the accuracy of the initial response
-										0 = initial response was incorrect and needed to be corrected
-										1 = initial response is correct
-latency:							the latency of the final (correct) response
-stimulusnumber:						the number of the current stimulus
-stimulusitem:						the currently presented item
-expressions.da:						d-score of the first blocks
-expressions.db:						d-score of the second blocks
-expressions.d:						overall d-score
-/ magnitude:						stores the magnitude of the implicit preference: "little to no", "a slight", "a moderate", "a strong"
-/ percentcorrect:       			the overall percent correct score of initial responses of test trials of D-score qualifying latencies
+blockcode:							当前实验的名字
+blocknum:							当前实验的序号
+trialcode:							当前实验的名字
+trialnum:							当前实验的序号
+response:							最后的实验反应（被试最后的按键记录下的详细代码）
+									备注:程序储存最后实验设计中正确的反应
+correct:							初始反应的正确率
+									0 = 初始反应是错误的且需要被纠正
+									1 = 初始反应是正确的
+latency:							影响初始（正确）反应的潜在因素
+stimulusnumber:						当前刺激的序号
+stimulusitem:						当前呈现的主体
+expressions.da:						第一模块实验的D分数
+expressions.db:						第二模块实验的D分数
+expressions.d:						所有的D分数
+/ magnitude:						储存内隐偏好的强度：“一点也没有”，“较轻程度的”，“中等程度的”，“较强程度的”
+/ percentcorrect:       			测量D分数时的总体初始反应正确率
 
 <data>
 /file = "性别属性词汇_原始数据.iqdat"
@@ -218,17 +217,17 @@ expressions.d:						overall d-score
 *******************
 汇总数据文件
 *******************
-script.startdate:					date script was run
-script.starttime:					time script was started
-script.subjectid:					subject id number
-script.groupid:						group id number
-script.elapsedtime:					time it took to run script (in ms)
-/completed:							0 = script was not completed; 1 = script was completed (all conditions run)
+script.startdate:					 运行数据处理程序
+script.starttime:					 运行计时程序 
+script.subjectid:					 被试编号
+script.groupid:						 组别编号
+script.elapsedtime:					 运行程序的时间
+/completed:							 0 = 程序未运行完成； 1 = 程序运行完成（所有情况下都运行）
 
-expressions.da:						d-score of the first blocks
-expressions.db:						d-score of the second blocks
-expressions.d:						overall d-score
-/ percentcorrect:       the overall percent correct score of initial responses of test trials of D-score qualifying latencies
+expressions.da:						 第一模块实验的D分数
+expressions.db:						 第二模块实验的D分数
+expressions.d:						 总体的D分数
+/ percentcorrect:                    测量D分数时的总体初始反应正确率
 
 <summarydata >
 /file = "性别属性词汇_汇总.iqdat"
@@ -257,7 +256,9 @@ Performance summary
 </trial>
 
 <text summary>
-/ items = ("你的IAT分数(D分数)是<% expressions.d %>,这表示 <% values.magnitude %> 程度地偏好 <% expressions.preferred %> 而不偏好 <% expressions.notpreferred %>.~n~n~n请按【空格】结束此会话.") 
+/ items = ("恭喜你完成了第一部分的测试！
+            
+            接下来，你将进入下一个模块填写一个问卷，继续完成测验。") 
 / size = (60%, 60%)
 / hjustify = left
  </text>
@@ -589,9 +590,8 @@ Experiment
 			9=incompatibletest2; 10=summary]
 /onexptend = [values.completed = 1]
 </expt>
-
 <expt >
-/subjects = (2 of 2)
+/ subjects = (2 of 2)
 / groupassignment = groupnumber
 / blocks = [
 				1=targetincompatiblepractice; 2=attributepractice; 3=incompatibletest1; 4=incompatibletestinstructions;
