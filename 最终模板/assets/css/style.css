@@ -11,7 +11,7 @@ General Styles
 
  .navbar-default .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
           color: #fff;
-          background-color: #FF0000; 
+          background-color: #bc9a5f;
       }
  h3 {
 padding: 15px 5px;
