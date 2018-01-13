@@ -901,11 +901,10 @@ html {
 }
 body {
   font-family: "Helvetica", Helvetica, Arial, sans-serif;
-  background: url(../img/10.jpg) repeat center center;
   font-size: 14px;
   line-height: 1.42857143;
   color: #333;
-  background-color: #fff;
+  background-color: #ffffff;
 }
 input,
 button,
@@ -3205,7 +3204,7 @@ tbody.collapse.in {
   font-size: 14px;
   text-align: left;
   list-style: none;
-  background-color: #ff0000;
+  background-color: #fff;
   -webkit-background-clip: padding-box;
           background-clip: padding-box;
   border: 1px solid #ccc;
