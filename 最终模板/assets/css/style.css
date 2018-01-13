@@ -84,10 +84,11 @@ text-transform: uppercase;
   DESCRIPTION SECTION STYLES
  ============================================================ */
 #description-sec {
-    padding-bottom:50px;
+    padding-bottom:50px
 }
 
     #description-sec p {
+      background-color: #ffffff;
         font-size:20px;
         line-height:35px;
     }
@@ -97,14 +98,15 @@ text-transform: uppercase;
 #contact-sec {
     background-color: #ededed;
     font-size:16px;
-    padding-bottom:50px;
+    padding-bottom:10px;
 }
+
 
  /* =============================================================
   FOOTER SECTION STYLES
  ============================================================ */
 .footer {
-    padding:20px;
+    padding:5px;
     font-size:15px;
 
 }
